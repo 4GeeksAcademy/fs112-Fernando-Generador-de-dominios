@@ -1,11 +1,15 @@
-import "bootstrap";
-import "./style.css";
+let pronouns = ['the', 'our'];
+let adjs = ['great', 'big'];
+let nouns = ['jogger', 'racoon'];
 
+const container = document.querySelector('.container')
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+pronouns.forEach(pronoun => {
+  adjs.forEach((adj) => {
+    nouns.forEach((noun) => {
+      const p = document.createElement('p');
+      p.innerHTML = (`www.${pronoun}${adj}${noun}.com`)     
+      container.appendChild(p)
+    })
+  })
+});
